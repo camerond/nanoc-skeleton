@@ -10,21 +10,27 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
-  # don’t filter or layout
+
+compile '/sass/*' do
+  filter :sass
+end
+
+compile '/articles/*' do
+  filter :kramdown
+  filter :rubypants
 end
 
 compile '*' do
-  filter :erb
-  layout 'default'
+  filter :kramdown
+  layout 'application'
 end
 
 route '/stylesheet/' do
-  '/style.css'
+  item.identifier.chop + '.css' # so that the /assets/style/screen/ item is compiled to /assets/style/screen.css
 end
 
 route '*' do
   item.identifier + 'index.html'
 end
 
-layout '*', :erb
+layout '*', :haml, :format => :html5
