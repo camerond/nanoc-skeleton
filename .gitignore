@@ -1,3 +1,5 @@
 /output
 /tmp
 /log
+.sass-cache/
+.DS_Store
