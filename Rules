@@ -18,11 +18,6 @@ end
 compile '/assets/javascript/*' do
 end
 
-compile '/articles/*' do
-  filter :kramdown
-  filter :rubypants
-end
-
 compile '*' do
   filter :kramdown
   layout 'application'
