@@ -3,4 +3,6 @@
 /log
 .sass-cache/
 .bundle/
+config.yaml
+.sitecopyrc
 .DS_Store
