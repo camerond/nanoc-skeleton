@@ -12,7 +12,7 @@ def stylesheet_link_tag(string_or_array, *args)
   }.merge(args.last.is_a?(::Hash) ? pop : {})
 
   files.map do |file|
-    path = "assets/stylesheets/#{file}/"
+    path = "assets/stylesheets/#{file}.css"
     options[:href] = path
     tag(:link, options)
   end.join("\n")
@@ -27,7 +27,7 @@ def javascript_include_tag(string_or_array, *args)
   }.merge(args.last.is_a?(::Hash) ? pop : {})
 
   files.map do |file|
-    path = "assets/javascript/#{file}/"
+    path = "assets/javascript/#{file}.js"
     options[:src] = path
     content_tag(:script, "", options)
   end.join("\n")

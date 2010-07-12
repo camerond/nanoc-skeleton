@@ -10,7 +10,7 @@ Also includes some dandy Sass mixins.
     bundle install
     rake #clears the output directory, runs Mongrel on port 9210.
 
-That's it. I'll be adding sitecopy soon.
+That's it.
 
 - Rake tasks (mostly) from [Rob Emerson's post](http://www.remerson.plus.com/articles/nanoc-rake/)
 - Also you can't beat the [Nanoc wiki](http://projects.stoneship.org/trac/nanoc/wiki)
